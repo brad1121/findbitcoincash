@@ -1,0 +1,53 @@
+@media print {
+    /* Hide everything in the body when printing... */
+    body.printing * { display: none; }
+    /* ...except our special div. */
+    body.printing #print-me { display: block; }
+}
+
+@media screen {
+    /* Hide the special layer from the screen. */
+    #print-me { display: none; }
+}
+.artwallet{
+    position: relative;
+    z-index: 0;
+    width: 894px;
+    height: 478px;
+    margin-bottom: 5px;
+}
+.artwallet .qrcode_public{
+    position: absolute;
+    z-index: 1;
+    top: 95px;
+    left: 31px;
+}
+.artwallet .qrcode_public > img{
+    height: 170px;
+}
+.artwallet .qrcode_private{
+    position: absolute;
+    right: 26px;
+    top: 192px;
+}
+.artwallet .qrcode_private > img{
+    height: 204px;
+}
+.artwallet .bchaddress{
+    position: absolute;
+    top: 234px;
+    left: 49px;
+    color: #000000;
+    transform: rotate(-90deg);
+    font-size: 15px;
+    font-family: Arial, "sans-serif"; 
+}
+.artwallet .bchprivwif{
+    position: absolute;
+    top: 234px;
+    right: 37px;
+    color: #000000;
+    transform: rotate(-90deg);
+    font-size: 13px;
+    font-family: Arial, "sans-serif";
+}
